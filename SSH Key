@@ -1,0 +1,8 @@
+# Generate new SSH Key
+ssh-keygen -t rsa -b 4096 -C
+"serverhacker@naver.com" -f ~/.ssh/github_id_rsa
+# Add new SSH Key to ssh-agent
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/github_id_rsa
+# Copy the SSH Key to clipboard
+cat ~/.ssh/github_id_rsa.pub
